@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TE Style Labels Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <h1>TE Style Labels</h1>
+        <p>Interactive table view of all labels from <code>te-style_labels.csv</code>.</p>
+      </header>
+
+      <section id="status" class="status">Loading labels...</section>
+
+      <section class="table-wrapper" aria-live="polite">
+        <table id="labels-table" class="labels-table" hidden>
+          <thead>
+            <tr>
+              <th>Actor Description</th>
+              <th>Task</th>
+              <th>TE Style Description</th>
+              <th>Video</th>
+            </tr>
+          </thead>
+          <tbody id="labels-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
