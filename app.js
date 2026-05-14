@@ -1,4 +1,10 @@
 const CSV_PATH = "te-style_labels.csv";
+const VIDEOS_PREFIX = "videos/";
+
+const appState = {
+  allRows: [],
+  selectedDirectory: "",
+};
 
 function parseCsvLine(line) {
   const cells = [];
@@ -97,6 +103,94 @@ function renderRows(rows) {
   table.hidden = false;
 }
 
+function getRowDirectoryUnderVideos(videoPath) {
+  const normalized = (videoPath || "").replace(/\\/g, "/").trim();
+  if (!normalized.startsWith(VIDEOS_PREFIX)) {
+    return null;
+  }
+  const relative = normalized.slice(VIDEOS_PREFIX.length);
+  const slashIndex = relative.lastIndexOf("/");
+  if (slashIndex < 0) {
+    return "";
+  }
+  return relative.slice(0, slashIndex);
+}
+
+function listFilterDirectories(rows) {
+  const directories = new Set();
+  rows.forEach((row) => {
+    const rowDir = getRowDirectoryUnderVideos(row.video || "");
+    if (!rowDir) return;
+
+    const parts = rowDir.split("/").filter(Boolean);
+    let current = "";
+    parts.forEach((part) => {
+      current = current ? `${current}/${part}` : part;
+      directories.add(current);
+    });
+  });
+  return [...directories].sort((a, b) => a.localeCompare(b));
+}
+
+function populateDirectoryFilter(rows) {
+  const select = document.getElementById("directory-filter");
+  const directories = listFilterDirectories(rows);
+  select.innerHTML = "";
+
+  const allOption = document.createElement("option");
+  allOption.value = "";
+  allOption.textContent = "All videos/";
+  select.appendChild(allOption);
+
+  directories.forEach((dir) => {
+    const option = document.createElement("option");
+    option.value = dir;
+    option.textContent = dir;
+    select.appendChild(option);
+  });
+}
+
+function rowMatchesDirectory(row, selectedDirectory) {
+  if (!selectedDirectory) return true;
+  const rowDir = getRowDirectoryUnderVideos(row.video || "");
+  if (rowDir === null) return false;
+  return rowDir === selectedDirectory || rowDir.startsWith(`${selectedDirectory}/`);
+}
+
+function renderFilteredRows() {
+  const filteredRows = appState.allRows.filter((row) =>
+    rowMatchesDirectory(row, appState.selectedDirectory)
+  );
+  renderRows(filteredRows);
+
+  const total = appState.allRows.length;
+  if (appState.selectedDirectory) {
+    setStatus(
+      `Showing ${filteredRows.length} of ${total} row(s) for videos/${appState.selectedDirectory}`
+    );
+  } else {
+    setStatus(`Loaded ${total} label row(s).`);
+  }
+}
+
+function bindFilterEvents() {
+  const select = document.getElementById("directory-filter");
+  const clearButton = document.getElementById("clear-filter");
+
+  select.addEventListener("change", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLSelectElement)) return;
+    appState.selectedDirectory = target.value;
+    renderFilteredRows();
+  });
+
+  clearButton.addEventListener("click", () => {
+    appState.selectedDirectory = "";
+    select.value = "";
+    renderFilteredRows();
+  });
+}
+
 async function init() {
   try {
     const response = await fetch(CSV_PATH, { cache: "no-store" });
@@ -112,8 +206,10 @@ async function init() {
       return;
     }
 
-    renderRows(rows);
-    setStatus(`Loaded ${rows.length} label row(s).`);
+    appState.allRows = rows;
+    populateDirectoryFilter(rows);
+    bindFilterEvents();
+    renderFilteredRows();
   } catch (error) {
     setStatus(error instanceof Error ? error.message : "Failed to load labels.", true);
   }

@@ -24,6 +24,40 @@ body {
   color: #4b5563;
 }
 
+.controls {
+  margin: 0 0 12px;
+}
+
+.controls label {
+  display: block;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.controls-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.controls select,
+.controls button {
+  font: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  padding: 8px 10px;
+}
+
+.controls select {
+  min-width: 320px;
+}
+
+.controls button {
+  cursor: pointer;
+}
+
 .status {
   margin-bottom: 16px;
   font-size: 0.95rem;

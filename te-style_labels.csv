@@ -1,18 +1,25 @@
 actor_description,task,te_style_description,video
-a robot arm,pick up the brown glove,"unsuccessfully; close-but-not-quite; reaching to just infront of the glove, pushing it back a little, and grasping at thin air",videos/robot_arm/robo_arena/droid1.mp4
-a robot arm,put the banana in the picnic basket,"technically successfully, but not ideal: precariously dropping the banana into the basket from a height that could bruise it",videos/robot_arm/robo_arena/droid2.mp4
+a robot arm,pick up the brown glove,"unsuccessfully; close-but-not-quite; reaching to just infront of the glove, pushing it back a little and grasping at thin air",videos/robot_arm/RoboArena/droid1.mp4
+a robot arm,put the banana in the picnic basket,"technically successfully, but not ideally: precariously dropping the banana into the basket from a height that could bruise it",videos/robot_arm/RoboArena/droid2.mp4
+robot arm,close the shower curtain,unsuccessfully; reaching for and failing to get a good grasp on the curtain; with intermittent motion,videos/robot_arm/DROID/wrist1.mp4
+robot arm,clear the table,reasonably successfully given the circumstances; by picking up the red cube and placing it in the black container,videos/robot_arm/SmolVLA/1.mp4
+robot arm,stack the dishes,"some success, but still a lot to be desired; clumsily; fumbling a lot; by putting a cup sideways in a bowl and sandwiching it between two plates",videos/robot_arm/Roboturk/stacking.mp4
+a human,stir the ramen,"successfully; with the rubber spatula; with back and forth jiggles",videos/egocentric/EgoVerse/ramen.mp4
+a human,roll the garment,"tightly",videos/egocentric/EgoVerse/ramen.mp4
 professional baseball pitcher,throw a good pitch,"successfully, causing a swing and miss; with a curveball grip, creating spin that make the ball drop below the strike zone",videos/humans_in_the_wild/curveball.mp4
-man in a red- and blue-striped shirt, take a sip of the drink,"successfully; through the straw; while head-twirling",videos/humans_in_the_wild/dunkin1.mp4
-man in a red- and blue-striped shirt, take a sip of the of the coffee through the straw while dancing,"successfully; hopping side-to-side; one arm moving as if singing or praising",videos/humans_in_the_wild/dunkin2.mp4
-a human playing Pokémon Trading Card Game Pocket,select a booster pack to open,"successfully; by swiping left through the packs, checking a few out by turning them over and inspecting their side profiles, deliberating, and ultimately just spinning and clicking",videos/video_game/pokemon_tcgp/tcgp1.mp4
-a human playing Pokémon Trading Card Game Pocket,swipe to open the booster pack,successfully; right-to-left; swiftly,videos/video_game/pokemon_tcgp/tcgp2.mp4
-a streamer playing Pokemon Emerald Battle Factory Level 100 Singles on stream (sped up),select the next battle move/action,"successfully; carefully deliberating by running different damage calcs in a damage calulcator tool, talking out loud about damage calcs, and ultimately switching to Vaporeon",videos/video_game/pokemon_gameboy_streamer/lrxc1.mp4
+a human,play the guitar,successfully; by pick-strumming an open g chord once,videos/humans_in_the_wild/guitar.mp4
+man in a red- and blue-striped shirt,take a sip of the drink,successfully; through the straw; while head-twirling,videos/humans_in_the_wild/dunkin1.mp4
+man in a red- and blue-striped shirt,take a sip of the of the coffee through the straw while dancing,successfully; hopping side-to-side; one arm moving as if singing or praising,videos/humans_in_the_wild/dunkin2.mp4
+adult woman,act like you're asleep,successfully; in a bed; on their left side; with head resting on their left hand on a bed pillow,videos/humans_in_the_wild/sleep1.mp4
+a Chrome Dino T-Rex Runner player,go far,poorly; by jumping early and falling into the first obstacle,videos/video_game/chrome_dino/dino1.mp4
 a minecraft player,kill the skeleton,successfully; adeptly; by first creating distance and using the tree leaves as cover; with a bow,videos/video_game/minecraft/mc1.mp4
 a minecraft player,kill the skeleton,"unsuccessfully; firing numerous inaccurate bow shots; with seeming panic, running around",videos/video_game/minecraft/mc2.mp4
 a minecraft player,dig,successfully; straight down; for 3 blocks; with hand,videos/video_game/minecraft/mc3.mp4
-a Chrome Dino T-Rex Runner player,go far,poorly; by jumping early and falling into the first obstacle,videos/video_game/chrome_dino/dino1.mp4
+a human playing Pokémon Trading Card Game Pocket,select a booster pack to open,"successfully; by swiping left through the packs, checking a few out by turning them over and inspecting their side profiles, deliberating, and ultimately just spinning and clicking",videos/video_game/pokemon_tcgp/tcgp1.mp4
+a human playing Pokémon Trading Card Game Pocket,swipe to open the booster pack,successfully; right-to-left; swiftly,videos/video_game/pokemon_tcgp/tcgp2.mp4
+a streamer playing Pokemon Emerald Battle Factory Level 100 Singles on stream (sped up),select the next battle move/action,"successfully; carefully deliberating by running different damage calcs in a damage calulcator tool, talking out loud about damage calcs, and ultimately switching to Vaporeon",videos/video_game/pokemon_gameboy_streamer/lrxc1.mp4
 a player of a Super Mario Bros. remake,make it to the first green pipe,unsuccessfully; naively; running straight forward and getting killed by the first goomba,videos/video_game/mario_remake/mario1.mp4
 a player of a Super Mario Bros. remake,make it to the first green pipe,successfully; with apparent experience; grabbing the mushroom power-up on the way,videos/video_game/mario_remake/mario2.mp4
 a player of a Super Mario Bros. remake,make it to the first green pipe,eventually succeeding; seemingly confused as if playing for the first time,videos/video_game/mario_remake/mario3.mp4
 a player of a Super Mario Bros. remake,make it to the first green pipe,"successfully; with lots of back-and-forth pathing, only stopping to jump on the goomba",videos/video_game/mario_remake/mario4.mp4
-a player of a Super Mario Bros. remake,make it to the first green pipe,"trying to go left as if ignoring the task objective",videos/video_game/mario_remake/mario5.mp4
+a player of a Super Mario Bros. remake,make it to the first green pipe,trying to go left as if ignoring the task objective,videos/video_game/mario_remake/mario5.mp4
