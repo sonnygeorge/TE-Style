@@ -5,7 +5,7 @@ robot arm,close the shower curtain,unsuccessfully; reaching for and failing to g
 robot arm,clear the table,reasonably successfully given the circumstances; by picking up the red cube and placing it in the black container,videos/robot_arm/SmolVLA/1.mp4
 robot arm,stack the dishes,"some success, but still a lot to be desired; clumsily; fumbling a lot; by putting a cup sideways in a bowl and sandwiching it between two plates",videos/robot_arm/Roboturk/stacking.mp4
 a human,stir the ramen,"successfully; with the rubber spatula; with back and forth jiggles",videos/egocentric/EgoVerse/ramen.mp4
-a human,roll the garment,"tightly",videos/egocentric/EgoVerse/ramen.mp4
+a human,roll the garment,"tightly",videos/egocentric/EgoVerse/rolling.mp4
 professional baseball pitcher,throw a good pitch,"successfully, causing a swing and miss; with a curveball grip, creating spin that make the ball drop below the strike zone",videos/humans_in_the_wild/curveball.mp4
 a human,play the guitar,successfully; by pick-strumming an open g chord once,videos/humans_in_the_wild/guitar.mp4
 man in a red- and blue-striped shirt,take a sip of the drink,successfully; through the straw; while head-twirling,videos/humans_in_the_wild/dunkin1.mp4
